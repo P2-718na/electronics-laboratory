@@ -1,4 +1,6 @@
 [scripts]
+"build:report:1" = "sh ./scripts/build:report:1.sh"
+"watch:report:1" = "nodemon -e tex --watch ./docs/reports/1 --exec ./scripts/build:report:1.sh"
 
 [packages]
 numpy = "*"
