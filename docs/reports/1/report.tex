@@ -45,18 +45,39 @@
 %\input{./docs/reports/frontpage.tex}
 
 \begin{center}
-  \huge TITOLO \\
+  \huge Misura della caratteristica I-V di due diodi a semiconduttore \\
   \large Giuseppe Sguera \getenv{MAT1}. Matteo Bonacini \getenv{MAT2}.\\ % see readme on how to use this
   \normalsize Turno 1, tavolo (numero non indicato).\\
   \today
 \end{center}
 
-%\begin{abstract}\label{sec:abstract}
-%ABSTRACT
-%\end{abstract}
+\begin{abstract}\label{sec:abstract}
+  In questa prova abbiamo misurato l'andamento I-V di due diodi a semiconduttore diversi (Silicio e Germanio), per poi svolgere un \emph{fit}
+  sui dati raccolti per ricavare i parametri $I_0$ e $\eta V_T$. La prova è servita anche come addestramento per usare
+  un oscilloscopio analogico. I risultati dei \emph{fit} sono ?? %todo compatibili/non.
+\end{abstract}
 
-\section{Scopo della prova}\label{sec:scopo}
-% fixme Introduzione?
+\section{Introduzione}\label{sec:scopo}
+  La caratteristica I-V di un diodo al silicio contiene tutte le informazioni necessarie per descriverne il comportamento.
+  Per correnti piccole, l'andamento previsto dalla teoria è riassunto nnell'Equazione di Shockley
+  \begin{equation}
+    I(V) = I_0 \left(
+      e^{
+        \frac {V_d} {\eta V_t}
+      } - 1
+    \right)
+    \label{eq:shockley}
+  \end{equation}
+  dove $V_d$ è la tensione applicata ai capi del diodo, $\eta$ è il \emph{fattore di idealità}, $V_T$ è un parametro dipendente dalla
+  temperatura e $I_0$ è il valore numerico della corrente inversa. % todo add ref to libro da cui la scioli ha rubato i grafici
+  % todo che cabbo è la corrente inversa porcoddio
+  Aumentando la corrente oltre una certa soglia, l'andamento diventa sub-esponenziale e non rispetta più l'equazione \eqref{eq:shockley}.
+
+  Lo scopo principale di questa prova è di misurare l'andamento I-V di due diodi a semiconduttore diversi, per poi svolgere un % todo add ref to materiale per diodi 
+  \emph{fit} del loro andamento nel limite della validità dell'equazione \eqref{eq:shockley}. Dal fit verranno estratti i parametri $I_0$ e $\eta V_T$. 
+  In secondo luogo, questa prova serve anche come addestramento per imparare ad usare un oscilloscopio analogico, in funzione delle successive
+  prove di laboratorio.
+
 
 \section{Apparato sperimentale}\label{sec:apparato-sperimentale}
 % fixme svolgimento?
