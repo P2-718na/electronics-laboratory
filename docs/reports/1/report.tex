@@ -145,7 +145,8 @@
         \item% 
           Diodo al Germanio, modello: %todo
       \end{itemize}
-    Le incertezze degli strumenti utilizzati, sono riportati in appendice \ref{sec:incertezze-strumentali}.
+    Le incertezze degli strumenti utilizzati sono riportate in appendice \ref{sec:incertezze-strumentali}.
+    Abbiamo considerato trascurabili le incertezze delle misure fatte con il multimetro, rispetto a quelle fatte con l'oscilloscopio.
 
   \subsection{Svolgimento}\label{subsec:svolgimento}
   %todo
@@ -208,7 +209,32 @@
 \appendix
 \textbf{\huge{Appendice}}
 \section{Incertezze strumentali}\label{sec:incertezze-strumentali}
-  culo2
+  \subsection{Incertezze per l'oscilloscopio}\label{sec:incertezze-oscilloscopio}
+    Nel nostro caso, l'oscilloscopio è lo strumento che introduce maggior incertezza sulle misure. Sullo schermo dello strumento,
+    siamo riusciti ad apprezzare variazioni di $\frac 1 {10}$ del valore scelto come fondo scala. Per calcolare l'incertezza $\sigma$ associata
+    ad una singola misura, abbiamo usato la formula \eqref{eq:incertezza-oscilloscopio}:
+    \begin{equation}
+      \sigma = \sqrt{
+        \sigma_\text{casuale}^2 + \sigma_\text{sistematica}^2
+      }
+      \label{eq:incertezza-oscilloscopio}
+    \end{equation}
+
+    L'incertezza sistematica è fornita dal produttore dello strumento, e ha un valore di $\sigma_\text{sistematico}=3\%$.
+    Per valutare l'incertezza casuale, invece, abbiamo usato la formula \eqref{eq:incertezza-oscilloscopio}:
+
+    \begin{equation}
+      \sigma_\text{casuale} = \sigma_0 + \sigma_i = 2\sigma_\text{risoluzione}
+      \label{eq:incertezza-oscilloscopio}
+    \end{equation}
+    dove $\sigma_0$ è l'incertezza dovuta alla scelta dello zero dello strumento e
+    $\sigma_i$ è l'incertezza associata alla $i$-esima misura. Abbiamo preso come valore di $\sigma_\text{risoluzione}$ la metà
+    della più piccola variazione apprezzabile, ovvero: $\sigma_\text{risoluzione} = \frac 1 {20} V_\text{fondoscala}$. Si noti che le
+    incertezze sullo zero e sulla misura sono considerate \emph{dipendenti}, e quindi vengono sommate linearmente.
+
+  \subsection{Incertezze per il multimetro}\label{sec:incertezze-multimetro}
+    Le incertezze sulle misure del multimetro sono ricavate dal manuale di istruzioni del fornitore. Per il nostro multimetro, 
+    in tutto l'intervallo di misura, valgono $\sigma_V = \pm (0.3\% + 2\text{digit})$ e $\sigma_I = \pm (0.4\% + 2\text{digit})$, rispettivamente per le misure di tensione e corrente. 
 
 \section{Valori numerici delle misure}\label{sec:valori-misure}
   %todo 
