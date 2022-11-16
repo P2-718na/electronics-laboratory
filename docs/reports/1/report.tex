@@ -1,6 +1,9 @@
-\documentclass[11pt, a4paper, twoside]{article}
-
-\usepackage{fontspec}
+\documentclass[11pt, a4paper, twocolumn]{article}
+% questi due pacchetti servono per indicare la codifica della tastiera usata e i caratteri che vogliamo usare. 
+% a noi non servono molto, ma metti che compiliamo con un computer russo?
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%non capisco il perché della metà dei pacchetti kek
 \usepackage{blindtext}
 \usepackage{geometry}
 \usepackage{setspace}
@@ -18,10 +21,9 @@
 \usepackage{booktabs}
 \usepackage{url}
 
-\raggedbottom
 
-\titlespacing*{\section}{0px}{3mm}{1mm}
-\titlespacing*{\subsection}{0px}{3mm}{1mm}
+\titlespacing*{\section}{0px}{3mm}{1mm}         %what purpouse?
+\titlespacing*{\subsection}{0px}{3mm}{1mm}      %what purpouse?
 \geometry{
   left=2cm,
   right=2cm,
@@ -40,22 +42,27 @@
 % Roman numerals
 \newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
+
+% authors, date and title---------------------------------------------------------------
+\author{Giuseppe Sguera \\ \getenv{MAT1} \and Matteo Bonacini \\ \getenv{MAT2}}
+\date{\today}
+\title{Misura della caratteristica I-V di due diodi a semiconduttore}
+%---------------------------------------------------------------------------------------
 \begin{document}
 
-%\input{./docs/reports/frontpage.tex}
+\twocolumn[
+  \begin{@twocolumnfalse}
+    %\input{./docs/reports/frontpage.tex}
 
-\begin{center}
-  \textbf{\huge Misura della caratteristica I-V di due diodi a semiconduttore \\}
-  \large Giuseppe Sguera \getenv{MAT1}. Matteo Bonacini \getenv{MAT2}.\\ % see readme on how to use this
-  \normalsize Turno 1, tavolo (numero non indicato).\\
-  \today
-\end{center}
+    \maketitle
 
-\begin{abstract}\label{sec:abstract}
-  In questa prova abbiamo misurato l'andamento I-V di due diodi a semiconduttore diversi (Silicio e Germanio), per poi svolgere un \emph{fit}
-  sui dati raccolti e ricavare i parametri $I_0$ e $\eta V_T$. La prova è servita anche come addestramento per usare
-  un oscilloscopio analogico. I risultati dei \emph{fit} sono ?? %todo compatibili/non.
-\end{abstract}
+    \begin{abstract}\label{sec:abstract}
+      In questa prova abbiamo misurato l'andamento I-V di due diodi a semiconduttore diversi (Silicio e Germanio), per poi svolgere un \emph{fit}
+      sui dati raccolti e ricavare i parametri $I_0$ e $\eta V_T$. La prova è servita anche come addestramento per usare
+      un oscilloscopio analogico. I risultati dei \emph{fit} sono ?? %todo compatibili/non.
+    \end{abstract}
+ \end{@twocolumnfalse}
+]
 
 \section{Introduzione}\label{sec:scopo}
   La caratteristica I-V di un diodo al silicio contiene tutte le informazioni necessarie per descriverne il comportamento.
@@ -81,7 +88,7 @@
 
 \section{Apparato sperimentale}\label{sec:apparato-sperimentale}
   \subsection{Schema del circuito}\label{subsec:schema-circuito}
-    \begin{figure}[H]
+    \begin{figure}%[H]
       \centering
       \begin{subfigure}[t]{.47\textwidth}
         \includegraphics[width=8.75cm]{./assets/1/circuito-calibrazione.png}
@@ -175,10 +182,10 @@
   \end{table}
   %todo potenzialmente aggiungi calcolo di V_T??
   %todo aggiungi considerazioni sull'andamento.
-  \begin{figure}[H]
+  \begin{figure}%[H]
     \centering
     \begin{subfigure}[t]{.47\textwidth}
-      \includegraphics[width=8.25cm]{./assets/1/silicio.png}
+      \includegraphics[width=8.25cm]{./assets/1/SilicioBlu.pdf}
       \caption{
         \emph{
           Caratteristica I-V del diodo al Silicio. Sono riportati i dati raccolti, assieme al fit lineare svolto sui primi punti.
@@ -190,7 +197,7 @@
     \hspace{5mm}
     %
     \begin{subfigure}[t]{.47\textwidth}
-      \includegraphics[width=8.25cm]{./assets/1/germanio.png}
+      \includegraphics[width=8.25cm]{./assets/1/Germanio2.pdf}
       \caption{
         \emph{
            Caratteristica I-V del diodo al Germanio. Sono riportati i dati raccolti, assieme al fit lineare svolto sui primi punti.
