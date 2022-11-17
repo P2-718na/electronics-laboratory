@@ -1,6 +1,5 @@
 \documentclass[11pt, a4paper, twoside]{article}
 
-\usepackage{fontspec}
 \usepackage{blindtext}
 \usepackage{geometry}
 \usepackage{setspace}
@@ -17,6 +16,7 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{url}
+\usepackage{csvsimple}
 
 \raggedbottom
 
@@ -42,6 +42,7 @@
 
 \begin{document}
 
+
 %\input{./docs/reports/frontpage.tex}
 
 \begin{center}
@@ -63,7 +64,7 @@
   \begin{equation}
     I(V) = I_0 \left(
       e^{
-        \frac {V_d} {\eta V_t}
+        \frac {V_d} {\eta V_T}
       } - 1
     \right)
     \label{eq:shockley}
@@ -87,7 +88,7 @@
         \includegraphics[width=8.75cm]{./assets/1/circuito-calibrazione.png}
         \caption{
           \emph{
-            Schema del circuito usato per la calibrazione. Il generatore (1) è collegato ad un potenziometro (2).
+            Schema del circuito usato per la calibrazione. Il generatore (1) è collegato al potenziometro (2).
             Il multimetro (3) misura il potenziale tra terra e il pin intermedio del potenziometro.
             L'oscilloscopio (non riportato) è collegato a terra e al punto (A).
           }
@@ -101,7 +102,7 @@
         \includegraphics[width=8.75cm]{./assets/1/circuito.png}
         \caption{
           \emph{
-            Schema del circuito usato per l'esperimento. Il generatore (1) è collegato ad un potenziometro (2).
+            Schema del circuito usato per l'esperimento. Il generatore (1) è collegato al potenziometro (2).
             Il multimetro (3) misura la corrente che scorre nel diodo (4). L'oscilloscopio (non riportato) è
             collegato a terra e al punto (B).
           }
@@ -153,6 +154,8 @@
   Non so se questa sezione lei la voglia o no...
 
 \section{Risultati}\label{sec:risultati}
+  Non è stato necessario aggiungere una correzione per la mancata calibrazione degli strumenti, visto che le misure di
+  tensione sono compatibili entro il $3\%$. %todo? add fit per calibrazione?
   I valori numerici dei dati raccolti sono riportati in appendice \ref{sec:valori-misure}.
   I risultati dei \emph{fit} sono riportati in tabella \ref{tab:risultati-fit}.
   In figura \ref{fig:caratteristiche-iv} sono riportati i grafici delle caratteristiche I-V dei due diodi.
@@ -209,12 +212,12 @@
 \appendix
 \textbf{\huge{Appendice}}
 \section{Incertezze strumentali}\label{sec:incertezze-strumentali}
-  \subsection{Incertezze per l'oscilloscopio}\label{sec:incertezze-oscilloscopio}
+  \subsection{Incertezze per l'oscilloscopio}\label{subsec:incertezze-oscilloscopio}
     Nel nostro caso, l'oscilloscopio è lo strumento che introduce maggior incertezza sulle misure. Sullo schermo dello strumento,
     siamo riusciti ad apprezzare variazioni di $\frac 1 {10}$ del valore scelto come fondo scala. Per calcolare l'incertezza $\sigma$ associata
     ad una singola misura, abbiamo usato la formula \eqref{eq:incertezza-oscilloscopio}:
     \begin{equation}
-      \sigma = \sqrt{
+      \sigma_V = \sqrt{
         \sigma_\text{casuale}^2 + \sigma_\text{sistematica}^2
       }
       \label{eq:incertezza-oscilloscopio}
@@ -232,13 +235,68 @@
     della più piccola variazione apprezzabile, ovvero: $\sigma_\text{risoluzione} = \frac 1 {20} V_\text{fondoscala}$. Si noti che le
     incertezze sullo zero e sulla misura sono considerate \emph{dipendenti}, e quindi vengono sommate linearmente.
 
-  \subsection{Incertezze per il multimetro}\label{sec:incertezze-multimetro}
+  \subsection{Incertezze per il multimetro}\label{subsec:incertezze-multimetro}
     Le incertezze sulle misure del multimetro sono ricavate dal manuale di istruzioni del fornitore. Per il nostro multimetro, 
     in tutto l'intervallo di misura, valgono $\sigma_V = \pm (0.3\% + 2\text{digit})$ e $\sigma_I = \pm (0.4\% + 2\text{digit})$, rispettivamente per le misure di tensione e corrente. 
 
 \section{Valori numerici delle misure}\label{sec:valori-misure}
-  %todo 
-  culo
+  \subsection{Dati per la calibrazione}\label{subsec:valori-calibrazione}
+    %todo 
+    \begin{table}[H]
+      \centering
+      \begin{tabular}[t]{c|c|c||c|c|c}
+        \toprule
+        $V^\text{osc}$ (mV) & $V_\text{fondoscala}^\text{osc}$ (mV) & $\sigma^\text{osc}$ (mV) & $V^\text{mult}$ (mV) & $V_\text{fondoscala}^\text{mult}$ (mV) & $\sigma^\text{mult}$ (mA)%
+        \csvreader[
+          head to column names,
+        ]{./data/1/calibrazione.csv}{}% use head of csv as column names
+        {\\\hline\osc&\fondoscalaOsc&\sigmaOsc&\mult&\fondoscalaMult&\sigmaMult}\\%
+        \bottomrule
+        \end{tabular}
+      \caption{
+        Dati raccolti per la calibrazione degli strumenti.
+      }
+      \label{tab:valori-calibrazione}
+    \end{table}
+
+  \subsection{Dati relativi al silicio}\label{subsec:valori-silicio}
+    %todo 
+    \begin{table}[H]
+      \centering
+      \begin{tabular}[t]{c|c|c||c|c|c}
+        \toprule
+        V (mV) & $V_\text{fondoscala}$ (mV) & $\sigma_V$ (mV) & I (mA) & $I_\text{fondoscala}$ (mA) & $\sigma_I$ (mA)%
+        \csvreader[
+          head to column names,
+        ]{./data/1/silicio.csv}{}% use head of csv as column names
+        {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
+        \bottomrule
+        \end{tabular}
+      \caption{
+        Dati raccolti relativi alla caratteristica I-V del silicio.
+      }
+      \label{tab:valori-silicio}
+    \end{table}
+
+  \subsection{Dati relativi al germanio}\label{subsec:valori-germanio}
+  %todo sistema cifre significative
+    \begin{table}[H]
+      \centering
+      \begin{tabular}[t]{c|c|c||c|c|c}
+        \toprule
+        V (mV) & $V_\text{fondoscala}$ (mV) & $\sigma_V$ (mV) & I (mA) & $I_\text{fondoscala}$ (mA) & $\sigma_I$ (mA)%
+        \csvreader[
+          head to column names,
+        ]{./data/1/germanio.csv}{}% use head of csv as column names
+        {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
+        \bottomrule
+        \end{tabular}
+      \caption{
+        Dati raccolti relativi alla caratteristica I-V del germanio.
+      }
+      \label{tab:valori-germanio}
+    \end{table}
+
 
 \bibliographystyle{unsrt} % We choose the "plain" reference style
 \bibliography{./docs/reports/electronicsLabRefs.bib}
