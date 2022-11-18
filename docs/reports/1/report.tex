@@ -249,7 +249,7 @@
       \centering
       \begin{tabular}[t]{c|c|c||c|c|c}
         \toprule
-        $V^\text{osc}$ (mV) & $V_\text{fondoscala}^\text{osc}$ (mV) & $\sigma^\text{osc}$ (mV) & $V^\text{mult}$ (mV) & $V_\text{fondoscala}^\text{mult}$ (mV) & $\sigma^\text{mult}$ (mA)%
+        $V^\text{osc}$ (mV) & $V_\text{fondoscala}^\text{osc}$ (mV) & $\sigma^\text{osc}$ (mV) & $V^\text{mult}$ (mV) & $V_\text{fondoscala}^\text{mult}$ (V) & $\sigma^\text{mult}$ (mV)%
         \csvreader[
           head to column names,
         ]{./data/1/calibrazione.csv}{}% use head of csv as column names
@@ -274,7 +274,7 @@
         ]{./data/1/silicio.csv}{}% use head of csv as column names
         {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
         \bottomrule
-        \end{tabular}
+      \end{tabular}
       \caption{
         Dati raccolti relativi alla caratteristica I-V del silicio.
       }
@@ -293,7 +293,7 @@
         ]{./data/1/germanio.csv}{}% use head of csv as column names
         {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
         \bottomrule
-        \end{tabular}
+      \end{tabular}
       \caption{
         Dati raccolti relativi alla caratteristica I-V del germanio.
       }
