@@ -59,7 +59,7 @@
 
     \begin{abstract}\label{sec:abstract}
       In questa prova abbiamo misurato l'andamento I-V di due diodi a semiconduttore diversi (Silicio e Germanio), per poi svolgere un \emph{fit}
-      sui dati raccolti e ricavare i parametri $I_0$ e $\eta V_T$. La prova è servita anche come addestramento per usare
+      sui dati raccolti e ricavare i parametri $I_0$ e $\eta V_T$. La prova è servita anche come addestramento all'utilizzo
       un oscilloscopio analogico. I risultati dei \emph{fit} sono compatibili con il range di valori atteso.
     \end{abstract}
 % \end{@twocolumnfalse}
@@ -67,7 +67,7 @@
 
 \section{Introduzione}\label{sec:scopo}
   La caratteristica I-V di un diodo al silicio contiene tutte le informazioni necessarie per descriverne il comportamento.
-  Per correnti piccole, l'andamento previsto dalla teoria è riassunto dall'Equazione di Shockley
+  Per correnti piccole, l'andamento previsto dalla teoria è riassunto dall'Equazione di Shockley \eqref{eq:shockley}:
   \begin{equation}
     I(V) = I_0 \left(
       e^{
@@ -77,11 +77,11 @@
     \label{eq:shockley}
   \end{equation}
   dove $V_d$ è la tensione applicata ai capi del diodo, $\eta$ è il \emph{fattore di idealità}, $V_T$ è un parametro dipendente dalla
-  temperatura e $I_0$ è il valore numerico della corrente inversa. Per ulteriori informazioni, si rimanda a \cite{halkias2001integrated}.
+  temperatura e $I_0$ è la corrente inversa. Per ulteriori informazioni, si rimanda a \cite{halkias2001integrated}.
   Aumentando la corrente oltre una certa soglia, l'andamento diventa sub-esponenziale e non rispetta più l'equazione \eqref{eq:shockley}.
 
   Lo scopo principale di questa prova è di misurare l'andamento I-V di due diodi a semiconduttore diversi (vedi sezione \ref{subsec:materiali}), per poi svolgere un
-  \emph{fit} del loro andamento nel limite della validità dell'equazione \eqref{eq:shockley}. Dal fit verranno estratti i parametri $I_0$ e $\eta V_T$.
+  \emph{fit} del loro andamento nel limite di validità dell'equazione \eqref{eq:shockley}. Dal fit verranno estratti i parametri $I_0$ e $\eta V_T$.
   In secondo luogo, questa prova serve anche come addestramento per imparare ad usare un oscilloscopio analogico, in funzione delle successive
   prove di laboratorio.
 
@@ -121,8 +121,7 @@
 
     Il circuito che abbiamo realizzato è schematizzato in figura \ref{fig:circuiti}, in due configurazioni diverse. In figura \ref{fig:circuito-calibrazione}
     è riportata la configurazione usata per controllare la calibrazione degli strimenti; in figura \ref{fig:circuito-prova}
-    è riportata quella usata durante l'esperimento. In questa sezione tratteremo solamente della configurazione usata
-    durante l'esperimento. Il circuito è strutturato come segue:
+    è riportata quella usata durante l'esperimento. Il circuito per l'esperimento è strutturato come segue:
     \begin{enumerate}
       \item%
         Un generatore di tensione costante di $5V$ è collegato ai \emph{pin} fissi di un potenziometro.
@@ -131,6 +130,7 @@
       \item%
         Un osciolloscopio è collegato a terra e al punto $(B)$ del circuito.
     \end{enumerate}
+    Per ottenere il circuito di calibrazione, è sufficiente cortocircuitare il diodo e collegare l'oscilloscopio al punto $(A)$.
 
   \subsection{Materiale e strumenti usati}\label{subsec:materiali}
     Segue una lista del materiale e degli strumenti usati durante la prova:
@@ -206,8 +206,10 @@
   \end{figure}
 
 \section{Conclusioni}\label{sec:conclusioni}
-  C'è da capire se vuole questa roba
-  % todo
+  Per entrambi i diodi, osserviamo qualitativamente l'andamento atteso: il plot in scala logaritmica
+  è pressoché lineare fino a circa 600$mV$ per il diodo al silicio e circa 120$mV$ per il diodo al germanio.
+  Quantitativamente, i valori di $\eta V_T$ sono compatibili con quelli attesi.
+
 \newpage
 \appendix
 \textbf{\huge{Appendice}}
@@ -223,7 +225,7 @@
       \label{eq:incertezza-oscilloscopio}
     \end{equation}
 
-    L'incertezza sistematica è fornita dal produttore dello strumento, e ha un valore di $\sigma_\text{sistematico}=3\%$.
+    L'incertezza sistematica è fornita dal produttore dello strumento, e ha un valore di $\sigma_\text{sistematica}=3\%$.
     Per valutare l'incertezza casuale, invece, abbiamo usato la formula \eqref{eq:incertezza-oscilloscopio-casuale}:
 
     \begin{equation}
@@ -284,7 +286,7 @@
       \centering
       \begin{tabular}[t]{c|c|c||c|c|c}
         \toprule
-        $V$ ($mV$) & $V_\text{fondoscala}$ ($mV$) & $\sigma_V$ ($mV$) & $I$ ($mA$) & $I_\text{fondoscala}$ ($mA$) & $\sigma_I$ ($mA$)%
+        $V$ ($mV$) & $V_\text{fondoscala}$ ($mV$) & $\sigma_V$ ($mV$) & $I$ ($mA$) & $I_\text{fondoscala}$ ($mA$) & $\sigma_I$ ($\mu A$)%
         \csvreader[
           head to column names,
         ]{./data/1/germanio.csv}{}% use head of csv as column names
