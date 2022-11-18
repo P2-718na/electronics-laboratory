@@ -23,7 +23,7 @@ void analisi() {
 
   TGraphErrors* germanio =
       new TGraphErrors("Germanio2.csv", "%lg %lg %lg", ",");
-  germanio->SetTitle("Diodo al Germanio; Tensione (V); Corrente (A)");
+  germanio->SetTitle("Diodo al Germanio; Tensione (mV); Corrente (mA)");
   germanio->SetMarkerStyle(2);
   germanio->SetMarkerColor(12);
   germanio->SetMarkerSize(1);
@@ -36,19 +36,19 @@ void analisi() {
     germanio->SetPointError(i, sqrt(ex), 0);
   }
 
-  TF1* ger_func = new TF1("ger_func", "expo1", 0, 120e-3, 2);
-  ger_func->SetParameters(1e-6, 50);
+  TF1* ger_func = new TF1("ger_func", "expo1", 0, 120, 2);
+  ger_func->SetParameters(1e-3, 50e+3);
   ger_func->SetParNames("I_{0}", "#etaV_{T}");
 
   germanio->Fit("ger_func", "RQ");
   TF1* fit_func = germanio->GetFunction("ger_func");
-  fit_func->SetRange(0, 600e-3);
+  fit_func->SetRange(0, 600);
   fit_func->SetLineColor(kRed + 1);
   fit_func->SetLineWidth(1);
 
   TGraphErrors* silicio =
       new TGraphErrors("Silicio2.csv", "%lg %lg %lg", ",");
-  silicio->SetTitle("Diodo al Silicio; Tensione (mV); Corrente (A)");
+  silicio->SetTitle("Diodo al Silicio; Tensione (mV); Corrente (mA)");
   silicio->SetMarkerStyle(2);
   silicio->SetMarkerColor(12);
   silicio->SetMarkerSize(1);
@@ -62,7 +62,7 @@ void analisi() {
   }
 
   TF1* sil_func = new TF1("sil_func", "[0]*(exp(x/[1]) - 1)", 0, 610);
-  sil_func->SetParameters(1e-9, 60e+3);
+  sil_func->SetParameters(1e-6, 60e+3);
   sil_func->SetParNames("I_{0}", "#etaV_{T}");
 
   silicio->Fit("sil_func", "RQ");
@@ -104,7 +104,7 @@ void analisi() {
   printf(
       "Germanio:\n\tChi Quadro = %f\n\tCorrente di Saturazione = %e +/- "
       "%e A\n\tEta = %f +/- %f\n",
-      Chi_Ger, ger_0, ger_err_0, ger_1 * 1000 / 26, ger_err_1 * 1000 / 26);
+      Chi_Ger, ger_0, ger_err_0, ger_1 / 26, ger_err_1 / 26);
   printf(
       "Silicio:\n\tChi Quadro = %f\n\tCorrente di Saturazione = %e +/- %e "
       "A\n\tEta = %f +/- %f\n",
