@@ -1,5 +1,5 @@
 \documentclass[11pt, a4paper, twoside]{article}
-% questi due pacchetti servono per indicare la codifica della tastiera usata e i caratteri che vogliamo usare. 
+% questi due pacchetti servono per indicare la codifica della tastiera usata e i caratteri che vogliamo usare.
 % a noi non servono molto, ma metti che compiliamo con un computer russo?
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -82,7 +82,7 @@
   Aumentando la corrente oltre una certa soglia, l'andamento diventa sub-esponenziale e non rispetta più l'equazione \eqref{eq:shockley}.
 
   Lo scopo principale di questa prova è di misurare l'andamento I-V di due diodi a semiconduttore diversi (vedi sezione \ref{subsec:materiali}), per poi svolgere un
-  \emph{fit} del loro andamento nel limite della validità dell'equazione \eqref{eq:shockley}. Dal fit verranno estratti i parametri $I_0$ e $\eta V_T$. 
+  \emph{fit} del loro andamento nel limite della validità dell'equazione \eqref{eq:shockley}. Dal fit verranno estratti i parametri $I_0$ e $\eta V_T$.
   In secondo luogo, questa prova serve anche come addestramento per imparare ad usare un oscilloscopio analogico, in funzione delle successive
   prove di laboratorio.
 
@@ -120,45 +120,41 @@
       \label{fig:circuiti}
     \end{figure}
 
-    % fixme svolgimento?
     Il circuito che abbiamo realizzato è schematizzato in figura \ref{fig:circuiti}, in due configurazioni diverse. In figura \ref{fig:circuito-calibrazione}
     è riportata la configurazione usata per controllare la calibrazione degli strimenti; in figura \ref{fig:circuito-prova}
-    è riportata quella usata durante l'esperimento. In questa sezione tratteremo solamente la configurazione usata durante l'esperimento;
-    la calibrazione degli strumenti verrà trattata in %todo add ref (e capire se aggiungere la sezione svolgimento)
-    . Il circuito è strutturato come segue:
+    è riportata quella usata durante l'esperimento. In questa sezione tratteremo solamente della configurazione usata
+    durante l'esperimento. Il circuito è strutturato come segue:
     \begin{enumerate}
       \item%
         Un generatore di tensione costante di $5V$ è collegato ai \emph{pin} fissi di un potenziometro.
       \item%
         Il \emph{pin} variabile del potenziometro è collegato in serie a un multimetro e a un diodo.
       \item%
-        Un osciolloscopio è collegato a terra e al punto $(B)$ del circuito. 
+        Un osciolloscopio è collegato a terra e al punto $(B)$ del circuito.
     \end{enumerate}
 
   \subsection{Materiale e strumenti usati}\label{subsec:materiali}
     Segue una lista del materiale e degli strumenti usati durante la prova:
       \begin{itemize}
         \item%
-          Oscilloscopio analogico, modello: %todo add modello
+          Oscilloscopio analogico, modello: \emph{GW Instek GOS-652}.
         \item%
-          Multimetro digitale, modello: %todo add modello
+          Multimetro digitale, modello: \emph{ISO-TECH IDM 105}.
         \item%
-          Generatore di tensione, modello: %todo
+          Generatore di tensione, modello: \emph{Aim-TTi EB2025T}.
         \item%
           Sonda per oscilloscopio.
         \item%
-          Connettori vari (connettori \emph{a banana}, fili per la scheda millefori).
+          Connettori vari (connettori a banana, cavi per la scheda millefori).
         \item%
-          Diodo al Silicio, modello: %todo
-        \item% 
-          Diodo al Germanio, modello: %todo
+          Diodo al Silicio, modello: \emph{1N4148}
+        \item%
+          Diodo al Germanio, modello: \emph{OA47}
+        \item
+          Potenziometro da 1k$\Omega$.
       \end{itemize}
     Le incertezze degli strumenti utilizzati sono riportate in appendice \ref{sec:incertezze-strumentali}.
     Abbiamo considerato trascurabili le incertezze delle misure fatte con il multimetro, rispetto a quelle fatte con l'oscilloscopio.
-
-  \subsection{Svolgimento}\label{subsec:svolgimento}
-  %todo
-  Non so se questa sezione lei la voglia o no...
 
 \section{Risultati}\label{sec:risultati}
   Non è stato necessario aggiungere una correzione per la mancata calibrazione degli strumenti, visto che le misure di
@@ -243,12 +239,12 @@
     incertezze sullo zero e sulla misura sono considerate \emph{dipendenti}, e quindi vengono sommate linearmente.
 
   \subsection{Incertezze per il multimetro}\label{subsec:incertezze-multimetro}
-    Le incertezze sulle misure del multimetro sono ricavate dal manuale di istruzioni del fornitore. Per il nostro multimetro, 
-    in tutto l'intervallo di misura, valgono $\sigma_V = \pm (0.3\% + 2\text{digit})$ e $\sigma_I = \pm (0.4\% + 2\text{digit})$, rispettivamente per le misure di tensione e corrente. 
+    Le incertezze sulle misure del multimetro sono ricavate dal manuale di istruzioni del fornitore. Per il nostro multimetro,
+    in tutto l'intervallo di misura, valgono $\sigma_V = \pm (0.3\% + 2\text{digit})$ e $\sigma_I = \pm (0.4\% + 2\text{digit})$, rispettivamente per le misure di tensione e corrente.
 
 \section{Valori numerici delle misure}\label{sec:valori-misure}
   \subsection{Dati per la calibrazione}\label{subsec:valori-calibrazione}
-    %todo 
+    %todo
     \begin{table}[H]
       \centering
       \begin{tabular}[t]{c|c|c||c|c|c}
@@ -267,7 +263,7 @@
     \end{table}
 
   \subsection{Dati relativi al silicio}\label{subsec:valori-silicio}
-    %todo 
+    %todo
     \begin{table}[H]
       \centering
       \begin{tabular}[t]{c|c|c||c|c|c}
