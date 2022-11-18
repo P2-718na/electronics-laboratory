@@ -248,8 +248,9 @@
     \begin{table}[H]
       \centering
       \begin{tabular}[t]{c|c|c||c|c|c}
+        \multicolumn{3}{c}{Oscilloscopio} & \multicolumn{3}{c}{Multimetro} \\
         \toprule
-        $V^\text{osc}$ (mV) & $V_\text{fondoscala}^\text{osc}$ (mV) & $\sigma^\text{osc}$ (mV) & $V^\text{mult}$ (mV) & $V_\text{fondoscala}^\text{mult}$ (V) & $\sigma^\text{mult}$ (mV)%
+        Tensione ($mV$) & Fondoscala ($mV$) & \sigma ($mV$) & Tensione ($mV$) & Fondoscala ($V$) & \sigma ($mV$) %
         \csvreader[
           head to column names,
         ]{./data/1/calibrazione.csv}{}% use head of csv as column names
@@ -268,7 +269,7 @@
       \centering
       \begin{tabular}[t]{c|c|c||c|c|c}
         \toprule
-        V (mV) & $V_\text{fondoscala}$ (mV) & $\sigma_V$ (mV) & I (mA) & $I_\text{fondoscala}$ (mA) & $\sigma_I$ (mA)%
+        V ($mV$) & V_\text{fondoscala} ($mV$) & \sigma_V ($mV$) & I ($mA$) & I_\text{fondoscala} ($mA$) & \sigma_I ($mA$)%
         \csvreader[
           head to column names,
         ]{./data/1/silicio.csv}{}% use head of csv as column names
@@ -287,7 +288,7 @@
       \centering
       \begin{tabular}[t]{c|c|c||c|c|c}
         \toprule
-        V (mV) & $V_\text{fondoscala}$ (mV) & $\sigma_V$ (mV) & I (mA) & $I_\text{fondoscala}$ (mA) & $\sigma_I$ (mA)%
+        V ($mV$) & V_\text{fondoscala} ($mV$) & \sigma_V ($mV$) & I ($mA$) & I_\text{fondoscala} ($mA$) & \sigma_I ($mA$)%
         \csvreader[
           head to column names,
         ]{./data/1/germanio.csv}{}% use head of csv as column names
