@@ -69,7 +69,7 @@
   La caratteristica I-V di un diodo al silicio contiene tutte le informazioni necessarie per descriverne il comportamento.
   Per correnti piccole, l'andamento previsto dalla teoria è riassunto dall'Equazione di Shockley \eqref{eq:shockley}:
   \begin{equation}
-    I(V) = I_0 \left(
+    I(V_d) = I_0 \left(
       e^{
         \frac {V_d} {\eta V_T}
       } - 1
@@ -146,9 +146,9 @@
         \item%
           Connettori vari (connettori a banana, cavi per la scheda millefori).
         \item%
-          Diodo al Silicio, modello: \emph{1N4148}
+          Diodo al Silicio, modello: \emph{1N4148}.
         \item%
-          Diodo al Germanio, modello: \emph{OA47}
+          Diodo al Germanio, modello: \emph{OA47}.
         \item
           Potenziometro da 1k$\Omega$.
       \end{itemize}
@@ -167,10 +167,10 @@
       \toprule
       Diodo& Parametro &Valore ottenuto\\
       \midrule
-      Si & $I_0$ &  $(2.3 \pm 1.8)nA$ \\
-      Si & $\eta V_T$ &  $(48 \pm 4)mV$ \\
-      Ge & $I_0$ &  $(1.6 \pm 0.4)\mu A$ \\
-      Ge & $\eta V_T$ &  $(35 \pm 3)mV$ \\
+      Si & $I_0$ &  $(2.3 \pm 1.8)\:nA$ \\
+      Si & $\eta V_T$ &  $(48 \pm 4)\:mV$ \\
+      Ge & $I_0$ &  $(1.6 \pm 0.4)\:\mu A$ \\
+      Ge & $\eta V_T$ &  $(35 \pm 3)\:mV$ \\
       \bottomrule
       \end{tabular}
     \caption{
