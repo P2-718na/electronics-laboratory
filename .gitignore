@@ -435,3 +435,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+sessions/*/build

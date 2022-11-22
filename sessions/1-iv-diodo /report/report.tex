@@ -91,7 +91,7 @@
     \begin{figure}%[H]
       \centering
       \begin{subfigure}[t]{.47\textwidth}
-        \includegraphics[width=8.75cm]{./assets/1/circuito-calibrazione.png}
+        \includegraphics[width=8.75cm]{./assets/circuito-calibrazione.png}
         \caption{
           \emph{
             Schema del circuito usato per la calibrazione. Il generatore (1) è collegato al potenziometro (2).
@@ -105,7 +105,7 @@
       \hspace{5mm}
       %
       \begin{subfigure}[t]{.47\textwidth}
-        \includegraphics[width=8.75cm]{./assets/1/circuito.png}
+        \includegraphics[width=8.75cm]{./assets/circuito.png}
         \caption{
           \emph{
             Schema del circuito usato per l'esperimento. Il generatore (1) è collegato al potenziometro (2).
@@ -181,7 +181,7 @@
   \begin{figure}%[H]
     \centering
     \begin{subfigure}[t]{.47\textwidth}
-      \includegraphics[width=8.25cm]{./assets/1/Silicio2.pdf}
+      \includegraphics[width=8.25cm]{./assets/Silicio2.pdf}
       \caption{
         \emph{
           Caratteristica I-V del diodo al Silicio. Sono riportati i dati raccolti, assieme al fit lineare svolto sui primi punti (fino a 610mV).
@@ -193,7 +193,7 @@
     \hspace{5mm}
     %
     \begin{subfigure}[t]{.47\textwidth}
-      \includegraphics[width=8.25cm]{./assets/1/Germanio2.pdf}
+      \includegraphics[width=8.25cm]{./assets/Germanio2.pdf}
       \caption{
         \emph{
            Caratteristica I-V del diodo al Germanio. Sono riportati i dati raccolti, assieme al fit lineare svolto sui primi punti (fino a 120mV).
@@ -251,7 +251,7 @@
         Tensione ($mV$) & Fondoscala ($mV$) & $\sigma$ ($mV$) & Tensione ($mV$) & Fondoscala ($V$) & $\sigma$ ($mV$) %
         \csvreader[
           head to column names,
-        ]{./data/1/calibrazione.csv}{}% use head of csv as column names
+        ]{./data/calibrazione.csv}{}% use head of csv as column names
         {\\\hline\osc&\fondoscalaOsc&\sigmaOsc&\mult&\fondoscalaMult&\sigmaMult}\\%
         \bottomrule
         \end{tabular}
@@ -270,7 +270,7 @@
         $V$ ($mV$) & $V_\text{fondoscala}$ ($mV$) & $\sigma_V$ ($mV$) & $I$ ($mA$) & $I_\text{fondoscala}$ ($mA$) & $\sigma_I$ ($mA$)%
         \csvreader[
           head to column names,
-        ]{./data/1/silicio.csv}{}% use head of csv as column names
+        ]{./data/silicio.csv}{}% use head of csv as column names
         {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
         \bottomrule
       \end{tabular}
@@ -289,7 +289,7 @@
         $V$ ($mV$) & $V_\text{fondoscala}$ ($mV$) & $\sigma_V$ ($mV$) & $I$ ($mA$) & $I_\text{fondoscala}$ ($mA$) & $\sigma_I$ ($mA$)%
         \csvreader[
           head to column names,
-        ]{./data/1/germanio.csv}{}% use head of csv as column names
+        ]{./data/germanio.csv}{}% use head of csv as column names
         {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
         \bottomrule
       \end{tabular}
@@ -302,6 +302,6 @@
 
 
 \bibliographystyle{unsrt} % We choose the "plain" reference style
-\bibliography{./docs/reports/electronicsLabRefs.bib}
+\bibliography{../electronicsLabRefs.bib}
 
 \end{document}

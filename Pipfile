@@ -1,7 +1,5 @@
 [scripts]
-"build:report:1" = "sh ./scripts/build:report:1.sh"
-"watch:report:1" = "nodemon -e tex --watch ./docs/reports/1 --exec ./scripts/build:report:1.sh"
+"build:report" = "sh ../../scripts/build:report.sh"
+"watch:report" = "nodemon -e tex --watch ./report --exec ../../scripts/build:report.sh"
 
 [packages]
-numpy = "*"
-
