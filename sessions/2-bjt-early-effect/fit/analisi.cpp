@@ -59,7 +59,7 @@ void analisi() {
 
   TMultiGraph* graph_tot = new TMultiGraph();
   graph_tot->SetTitle(
-      "Caratteristica Transistor BJT; Tensione (V); Corrente in Uscita (mA)");
+      "Caratteristica Transistor BJT; Tensione #left|V_{ce}#right| (V); Corrente in Uscita #left|I_{c}#right| (mA)");
   graph_tot->Add(graph100);
   graph_tot->Add(graph150);
   graph_tot->Add(graph200);
@@ -67,9 +67,9 @@ void analisi() {
 
   TCanvas* canva = new TCanvas("Transistor BJT");
   TLegend* legend = new TLegend(0.65, 0.13, 0.88, 0.28);
-  legend->AddEntry(func100,"100 mA","l");
-  legend->AddEntry(func150,"150 mA","l");
-  legend->AddEntry(func200,"200 mA","l");
+  legend->AddEntry(func100,"I_{b} = -100 mA","l");
+  legend->AddEntry(func150,"I_{b} = -150 mA","l");
+  legend->AddEntry(func200,"I_{b} = -200 mA","l");
   canva->SetGrid();
   graph_tot->Draw("APE");
   func100->Draw("SAME");
