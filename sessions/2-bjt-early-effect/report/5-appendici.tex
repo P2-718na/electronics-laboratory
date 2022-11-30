@@ -1,7 +1,88 @@
 \appendix
   \textbf{\huge{Appendice}}
-  \section{Incertezze strumentali}\label{sec:incertezze-strumentali}
-    asd
+    \section{Incertezze strumentali}\label{sec:incertezze-strumentali}
+      \subsection{Incertezze per l'oscilloscopio}\label{subsec:incertezze-oscilloscopio}
+      Nel nostro caso, l'oscilloscopio è lo strumento che introduce maggior incertezza sulle misure. Sullo schermo dello strumento,
+      siamo riusciti ad apprezzare variazioni di $\frac 1 {10}$ del valore scelto come fondo scala. Per calcolare l'incertezza $\sigma$ associata
+      ad una singola misura, abbiamo usato la formula \eqref{eq:incertezza-oscilloscopio}:
+      \begin{equation}
+        \sigma_V = \sqrt{
+          \sigma_\text{casuale}^2 + \sigma_\text{sistematica}^2
+        }
+        \label{eq:incertezza-oscilloscopio}
+      \end{equation}
 
-  \section{Valori numerici delle misure}\label{sec:valori-misure}
-    asd
+      L'incertezza sistematica è fornita dal produttore dello strumento, e ha un valore di $\sigma_\text{sistematica}=3\%$.
+      Per valutare l'incertezza casuale, invece, abbiamo usato la formula \eqref{eq:incertezza-oscilloscopio-casuale}:
+
+      \begin{equation}
+        \sigma_\text{casuale} = \sigma_0 + \sigma_i = 2\sigma_\text{risoluzione}
+        \label{eq:incertezza-oscilloscopio-casuale}
+      \end{equation}
+      dove $\sigma_0$ è l'incertezza dovuta alla scelta dello zero dello strumento e
+      $\sigma_i$ è l'incertezza associata alla $i$-esima misura. Abbiamo preso come valore di $\sigma_\text{risoluzione}$ la metà
+      della più piccola variazione apprezzabile, ovvero: $\sigma_\text{risoluzione} = \frac 1 {20} V_\text{fondoscala}$. Si noti che le
+      incertezze sullo zero e sulla misura sono considerate \emph{dipendenti}, e quindi vengono sommate linearmente.
+
+      \subsection{Incertezze per il multimetro}\label{subsec:incertezze-multimetro}
+      Le incertezze sulle misure del multimetro sono ricavate dal manuale di istruzioni del fornitore. Per il nostro multimetro,
+      in tutto l'intervallo di misura, valgono $\sigma_V = \pm (0.3\% + 2\text{digit})$ e $\sigma_I = \pm (0.4\% + 2\text{digit})$, rispettivamente per le misure di tensione e corrente.
+
+
+\section{Valori numerici delle misure}\label{sec:valori-misure}
+\subsection{Dati per $I_b = 100mA$}\label{subsec:base-100}
+\begin{table}[H]
+  \centering
+  \begin{tabular}[t]{c|c|c||c|c|c}
+    \toprule
+    $V$ ($mV$) & $V_\text{fondoscala}$ ($V$) & $\sigma_V$ ($V$) & $I$ ($mA$) & $I_\text{fondoscala}$ ($mA$) & $\sigma_I$ ($mA$)%
+    \csvreader[
+      head to column names,
+    ]{../data/100mA.csv}{}% use head of csv as column names
+    {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Dati raccolti per $I_b = 100mA$. Le incertezze sono riportate con una cifra significativa o
+    con due cifre significative, quando la prima cifra è $1$.
+  }
+  \label{tab:valori-100}
+\end{table}
+
+\subsection{Dati per $I_b = 150mA$}\label{subsec:base-150}
+\begin{table}[H]
+  \centering
+  \begin{tabular}[t]{c|c|c||c|c|c}
+    \toprule
+    $V$ ($V$) & $V_\text{fondoscala}$ ($V$) & $\sigma_V$ ($V$) & $I$ ($mA$) & $I_\text{fondoscala}$ ($mA$) & $\sigma_I$ ($mA$)%
+    \csvreader[
+      head to column names,
+    ]{../data/150mA.csv}{}% use head of csv as column names
+    {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Dati raccolti per $I_b = 150mA$. Le incertezze sono riportate con una cifra significativa o
+    con due cifre significative, quando la prima cifra è $1$.
+  }
+  \label{tab:valori-150}
+\end{table}
+
+\subsection{Dati per $I_b = 200mA$}\label{subsec:base-200}
+\begin{table}[H]
+  \centering
+  \begin{tabular}[t]{c|c|c||c|c|c}
+    \toprule
+    $V$ ($V$) & $V_\text{fondoscala}$ ($V$) & $\sigma_V$ ($V$) & $I$ ($mA$) & $I_\text{fondoscala}$ ($mA$) & $\sigma_I$ ($mA$)%
+    \csvreader[
+      head to column names,
+    ]{../data/200mA.csv}{}% use head of csv as column names
+    {\\\hline\V&\fondoscalaV&\sigmaV&\I&\fondoscalaI&\sigmaI}\\%
+    \bottomrule
+  \end{tabular}
+  \caption{
+    Dati raccolti per $I_b = 200mA$. Le incertezze sono riportate con una cifra significativa o
+    con due cifre significative, quando la prima cifra è $1$.
+  }
+  \label{tab:valori-200}
+\end{table}
