@@ -67,9 +67,9 @@ void analisi() {
 
   TCanvas* canva = new TCanvas("Transistor BJT");
   TLegend* legend = new TLegend(0.65, 0.13, 0.88, 0.28);
-  legend->AddEntry(func100,"I_{b} = -100 mA","l");
-  legend->AddEntry(func150,"I_{b} = -150 mA","l");
-  legend->AddEntry(func200,"I_{b} = -200 mA","l");
+  legend->AddEntry(func100,"I_{b} = -100 #muA","l");
+  legend->AddEntry(func150,"I_{b} = -150 #muA","l");
+  legend->AddEntry(func200,"I_{b} = -200 #muA","l");
   canva->SetGrid();
   graph_tot->Draw("APE");
   func100->Draw("SAME");
