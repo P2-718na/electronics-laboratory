@@ -1,2 +1,31 @@
 \section{Introduzione}\label{sec:scopo}
-Introduzione
+La caratteristica di uscita di un transistor \emph{BJT} è descritta dalle
+equazioni di Ebers-Moll. Noi siamo interessati al funzionamento del transistor in
+regione attiva, per cui vale la seguente relazione:
+\begin{equation}
+  I_C = \alpha_F I_{ES} (e^{\frac{V_{BE}}{\eta V_T}} - 1)
+  \label{eq:caratteristica}
+\end{equation}
+$I_C$ è la corrente uscente dal collettore, mentre $V_{BE}$ è la tensione tra base
+ed emettitore. Si noti che, nella configurazione di questo esperimento, i valori di $I_C$
+e $V_{BE}$ saranno negativi.
+L'equazione \eqref{eq:caratteristica} prevede una rapida crescita esponenziale,
+seguita da un tratto pressoché costante. Quello che si osserva nella realtà, invece, è che
+il tratto presenta una leggera pendenza, dovuta a una dipendenza lineare da $V_{BE}$.
+Questo fenomeno prende il nome di \emph{effetto Early}, ed è descritto dalla legge fenomenologica \eqref{eq:effetto-early}.
+\begin{equation}
+  I_C = \beta_F I_B \left( 1+ \frac {V_{CE}} {V_A} \right)
+  \label{eq:effetto-early}
+\end{equation}
+In questo esperimento analizzeremo questo fenomeno, \emph{plottando} la caratteristica $I_V$
+di un transistor e svolgendo un \emph{fit} lineare per misurarne tensione di Early,
+resistenza di uscita, conduttanza di uscita e guadagno di corrente. Il \emph{fit} è svolto
+con la seguente equazione:
+\begin{equation}
+  V_{CE} = a + b I_C
+  \label{eq:fit}
+\end{equation}
+dove $a$ è la tensione di Early, $b$ è la resistenza di uscita e $\frac 1 b = g$ è la
+conduttanza di uscita. Il guadagno di corrente $\beta$ è ottenuto fissando un valore
+di $V_{CE}$ e calcolando il rapporto $\frac {\Delta I_C} {\Delta I_B}$ tra due differenti \emph{set}
+di dati.
