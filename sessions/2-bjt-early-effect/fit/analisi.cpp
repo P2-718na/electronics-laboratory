@@ -38,9 +38,9 @@ void analisi() {
     graph200->SetPointError(i, ex, 0);
   }
 
-  graph100->Fit("pol1", "Q", "", 1, 4);
-  graph150->Fit("pol1", "Q", "", 1, 4);
-  graph200->Fit("pol1", "Q", "", 1, 4);
+  graph100->Fit("pol1", "Q", "", 1.2, 4.1);
+  graph150->Fit("pol1", "Q", "", 1.2, 4.1);
+  graph200->Fit("pol1", "Q", "", 1.2, 4.1);
 
   TF1* func100 = graph100->GetFunction("pol1");
   func100->SetRange(0, 4);
