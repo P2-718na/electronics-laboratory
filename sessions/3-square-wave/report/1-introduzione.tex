@@ -1,5 +1,15 @@
 \section{Introduzione}\label{sec:scopo}
 In elettronica digitale, è spesso necessario poter disporre di una funzione
 a onda quadra, per governare i componenti di un circuito.
-Un modo molto semplice per realizzare una funzione di questo tipo è partire
-da un onda
+Un modo molto semplice per realizzarla è partire
+da un'onda sinusoidale e \emph{tosarne} le estremità.
+La tosatura è realizzata tramite due diodi, collegati ad un potenziometro.
+Il potenziometro permette di regolare l'ampiezza dell'onda tosata, impostando il
+potenziale soglia a cui si verifica la tosatura (ovvero, il potenziale a cui i
+diodi invertono la loro polarizzazione).
+Chiamiamo \emph{tensione di polarizzazione} $V_{R}$ la tensione in uscita dai potenziometri
+e $V_{\gamma}$ la tensione di soglia dei diodi.
+Ci aspettiamo che l'onda tosata abbia un'ampiezza comparabile con $V = V_R + V_\gamma$.
+La forma dell'onda tosata è regolata da una resistenza variabile $R$ collegata in serie con il
+generatore di funzione: diminuendo la resistenza, si osserva che i tagli dell'onda
+diventano meno netti.
