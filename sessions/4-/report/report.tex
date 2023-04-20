@@ -1,0 +1,72 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\raggedbottom
+% questi due pacchetti servono per indicare la codifica della tastiera usata e i caratteri che vogliamo usare.
+% a noi non servono molto, ma metti che compiliamo con un computer russo?
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%non capisco il perché della metà dei pacchetti kek
+\usepackage{blindtext}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{catchfile} % used in \getenv command
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage[hang, flushmargin, multiple, bottom]{footmisc}
+\usepackage{float}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{csvsimple}
+
+\titlespacing*{\section}{0px}{3mm}{1mm}         %what purpouse?
+\titlespacing*{\subsection}{0px}{3mm}{1mm}      %what purpouse?
+\geometry{
+  left=2cm,
+  right=2cm,
+  top=2cm,
+  bottom=2cm
+}
+\setlength{\parindent}{10mm}
+\graphicspath{ {./assets}, {../../assets} }
+
+% Allow use of command \getenv{VARNAME}.
+% Taken from: https://tex.stackexchange.com/questions/62010/can-i-access-system-environment-variables-from-latex-for-instance-home
+\newcommand{\getenv}[2][]{
+  \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{\endlinechar=-1}%
+  \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
+
+% Roman numerals
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+% authors, date and title---------------------------------------------------------------
+\author{Giuseppe Sguera \\ \getenv{MAT1} \and Matteo Bonacini \\ \getenv{MAT2}}
+\date{\today}
+\title{Costruzione di un "1-bit full adder" e di circuiti "or" e "and" in logica positiva}
+%---------------------------------------------------------------------------------------
+\begin{document}
+
+    %\twocolumn[
+    %  \begin{@twocolumnfalse}
+        %\input{./docs/reports/frontpage.tex}
+
+    \maketitle
+
+    \input{0-abstract.tex}
+    % \end{@twocolumnfalse}
+    %]
+
+    \input{1-introduzione.tex}
+    \input{2-apparato.tex}
+    \input{3-risultati.tex}
+    \input{4-conclusioni.tex}
+    \input{5-appendici.tex}
+
+%\bibliographystyle{unsrt} % We choose the "plain" reference style
+%\bibliography{../electronicsLabRefs.bib}
+
+\end{document}
