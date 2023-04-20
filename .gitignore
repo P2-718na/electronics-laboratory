@@ -437,3 +437,4 @@ dmypy.json
 .pyre/
 
 sessions/*/build
+*.bkp
