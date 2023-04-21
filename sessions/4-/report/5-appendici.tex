@@ -1,16 +1,17 @@
+\newcommand*\xor{\oplus}
 \appendix
   \textbf{\huge{Appendice}}
-  \section{Tavola di verità di 1-bit full adder}\label{sec:1bfa-tavola}
-  tabella
-  \section{Schema del circuito di 1-bit full adder}\label{sec:1bfa-circuito}
-    \begin{figure}[h]
-      \centering
-      \includegraphics[width=10cm]{../assets/1bfa.drawio.pdf}
-      \caption{
-        \emph{
-          Schema del circuito 1-bit full adder. Le iniziali "\textsc{oc}" sui gate \textsc{xor} indicano che i gate sono
-          \emph{open collector}.
-        }
-      }
-      \label{fig:circuito}
-    \end{figure} %todo
+  \section{Equazione booleana di 1-bit full adder}\label{sec:1bfa-equazione}
+  L'espressione booleana dello 1-bit full adder si può derivare direttamente dal circuito
+  in figura \ref{fig:circuito}.
+  Quello che si ottiene è quanto segue:
+  \begin{equation}
+    S = C_i \xor A \xor B
+    \label{eq:S}
+  \end{equation}
+\begin{equation}
+  C_o = AB + C_i(A \xor B)
+  \label{eq:Co}
+\end{equation}
+
+

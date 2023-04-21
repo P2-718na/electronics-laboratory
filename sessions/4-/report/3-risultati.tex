@@ -1,72 +1,75 @@
 \section{Risultati}\label{sec:risultati}
-  Valori di V0 e V1 %todo
-
- %todo
-qui ci va la tavola di verità di test delle porte, con tanto di voltaggi in uscita (questo ci servirà dopo per circuito sommatore)
-
-misura resistenzxa di pullup
+Le misure sono state svolte sotto le condizioni riportate in tabella \ref{tab:livelli-logici}.
+I risultati di tutte le misure sono riportati di seguente, nelle tabelle
+\ref{tab:and-fulladder}, \ref{tab:exor-fulladder}, \ref{tab:or-fulladder} e \ref{tab:fulladder}.
 
 \begin{table}[H]
   \centering
-  \begin{subtable}[c]{0.5\textwidth}
+  \begin{subtable}[H]{0.5\textwidth}
     \centering
     \begin{tabular}[t]{c  c | c  c | c  c}
       \hline
-      A & B & V(A) & V(B) & Out & V(Out) \\
+      A & B & V(A) & V(B) & Out & V(Out) (V)\\
       \hline
-      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $(0.068 \pm 0.010) \: V$ \\
-      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $(0.068 \pm 0.010) \: V$ \\
-      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $(0.068 \pm 0.010) \: V$ \\
-      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $(4.10 \pm 0.02) \: V$ \\
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.10 \pm 0.02$ \\
       \hline
     \end{tabular}
   \end{subtable}
-  \begin{subtable}[c]{0.5\textwidth}
+
+  \vspace{.5cm}
+
+  \begin{subtable}[H]{0.5\textwidth}
     \centering
     \begin{tabular}[t]{c  c | c  c | c  c}
       \hline
-      A & B & V(A) & V(B) & Out & V(Out) \\
+      A & B & V(A) & V(B) & Out & V(Out) (V)\\
       \hline
-      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $(0.070 \pm 0.012) \: V$ \\
-      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $(0.071 \pm 0.010) \: V$ \\
-      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $(0.068 \pm 0.010) \: V$ \\
-      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $(4.09 \pm 0.02) \: V$ \\
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.070 \pm 0.012$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.071 \pm 0.010$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.09 \pm 0.02$ \\
       \hline
     \end{tabular}
   \end{subtable}
-  \caption{\emph{Tavole di verità delle porte \emph{AND} corrispondenti ai pin 1-2-3 (sinistra) e 4-5-6 (destra) dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A."}
+  \caption{\emph{Tavole di verità delle porte \textsc{and} corrispondenti ai pin 1-2-3 (sinistra) e 4-5-6 (destra) dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A."}
   \label{tab:and-fulladder}
 \end{table}
 
 \begin{table}[H]
   \centering
-  \begin{subtable}[c]{0.5\textwidth}
+  \begin{subtable}[H]{0.5\textwidth}
     \centering
     \begin{tabular}[t]{c  c | c  c | c  c}
       \hline
-      A & B & V(A) & V(B) & Out & V(Out) \\
+      A & B & V(A) & V(B) & Out & V(Out) (V)\\
       \hline
-      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $(0.364 \pm 0.011) \: V$ \\
-      0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $(5.03 \pm 0.03) \: V$ \\
-      1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $(5.03 \pm 0.03) \: V$ \\
-      1 & 1 & $V_{1}$ & $V_{1}$ & o & $(0.400 \pm 0.011) \: V$ \\
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.364 \pm 0.011$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $5.03 \pm 0.03$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $5.03 \pm 0.03$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & o & $0.400 \pm 0.011$ \\
       \hline
     \end{tabular}
   \end{subtable}
-  \begin{subtable}[c]{0.5\textwidth}
+
+  \vspace{.5cm}
+
+  \begin{subtable}[H]{0.5\textwidth}
     \centering
     \begin{tabular}[t]{c  c | c  c | c  c}
       \hline
-      A & B & V(A) & V(B) & Out & V(Out) \\
+      A & B & V(A) & V(B) & Out & V(Out) (V)\\
       \hline
-      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $(0.402 \pm 0.011) \: V$ \\
-      0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $(5.03 \pm 0.03) \: V$ \\
-      1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $(5.03 \pm 0.03) \: V$ \\
-      1 & 1 & $V_{1}$ & $V_{1}$ & o & $(0.443 \pm 0.011) \: V$ \\
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.402 \pm 0.011$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $5.03 \pm 0.03$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $5.03 \pm 0.03$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & o & $0.443 \pm 0.011$ \\
       \hline
     \end{tabular}
   \end{subtable}
-  \caption{\emph{Tavole di verità delle porte \emph{EXOR} corrispondenti ai pin 13-12-11 (sinistra) e 10-9-8 (destra) dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A."}
+  \caption{\emph{Tavole di verità delle porte \textsc{exor} corrispondenti ai pin 13-12-11 (sinistra) e 10-9-8 (destra) dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A."}
   \label{tab:exor-fulladder}
 \end{table}
 
@@ -74,15 +77,15 @@ misura resistenzxa di pullup
   \centering
   \begin{tabular}[t]{c  c | c  c | c  c}
     \hline
-    A & B & V(A) & V(B) & Out & V(Out) \\
+    A & B & V(A) & V(B) & Out & V(Out) (V)\\
     \hline
-    0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $(0.081 \pm 0.010) \: V$ \\
-    0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $(4.14 \pm 0.02) \: V$ \\
-    1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $(4.14 \pm 0.02) \: V$ \\
-    1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $(4.15 \pm 0.02) \: V$ \\
+    0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.081 \pm 0.010$ \\
+    0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $4.14 \pm 0.02$ \\
+    1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $4.14 \pm 0.02$ \\
+    1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.15 \pm 0.02$ \\
     \hline
   \end{tabular}
-  \caption{\emph{Tavole di verità della porta \emph{OR} corrispondenti ai pin 1-2-3 dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A."}
+  \caption{\emph{Tavole di verità della porta \textsc{or} corrispondenti ai pin 1-2-3 dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A."}
   \label{tab:or-fulladder}
 \end{table}
 
@@ -90,16 +93,16 @@ misura resistenzxa di pullup
   \centering
   \begin{tabular}[t]{c  c  c | c  c  c | c  c | c  c}
     \hline
-    A & B & $C_{in}$ & V(A) & V(B) & V($C_{in}$) & S & V(S) & $C_{out}$ & V($C_{out}$) \\
+    A & B & $C_{in}$ & V(A) & V(B) & V($C_{in}$) & S & V(S) (V) & $C_{out}$ & V($C_{out}$) (V) \\
     \hline
-    0 & 0 & 0 & $V_{0}$ & $V_{0}$ & $V_{0}$ & 0 & $(0.372 \pm 0.011) \: V$ & 0 & 0.084,0.010252
-    0 & 0 & 1 & $V_{0}$ & $V_{0}$ & $V_{1}$ & 1 & $(5.03 \pm 0.03) \: V$ & 0 & 0.086,0.010258
-    0 & 1 & 0 & $V_{0}$ & $V_{1}$ & $V_{0}$ & 1 & $(5.04 \pm 0.03) \: V$ & 0 & 0.082,0.010246
-    0 & 1 & 1 & $V_{0}$ & $V_{1}$ & $V_{1}$ & 0 & $(0.403 \pm 0.011) \: V$ & 1 & 4.15,0.02245
-    1 & 0 & 0 & $V_{1}$ & $V_{0}$ & $V_{0}$ & 1 & $(5.03 \pm 0.03) \: V$ & 0 & 0.083,0.010249
-    1 & 0 & 1 & $V_{1}$ & $V_{0}$ & $V_{1}$ & 0 & $(0.403 \pm 0.011) \: V$ & 1 & 4.15,0.02245
-    1 & 1 & 0 & $V_{1}$ & $V_{1}$ & $V_{0}$ & 0 & $(0.374 \pm 0.011) \: V$ & 1 & 4.14,0.02242
-    1 & 1 & 1 & $V_{1}$ & $V_{1}$ & $V_{1}$ & 1 & $(5.03 \pm 0.03) \: V$ & 1 & 4.14,0.02242
+    0 & 0 & 0 & $V_{0}$ & $V_{0}$ & $V_{0}$ & 0 & $0.372 \pm 0.011$   & 0 & $0.084 \pm 0.010 $\\
+    0 & 0 & 1 & $V_{0}$ & $V_{0}$ & $V_{1}$ & 1 & $5.03 \pm 0.03$   & 0 & $0.086 \pm 0.010$\\
+    0 & 1 & 0 & $V_{0}$ & $V_{1}$ & $V_{0}$ & 1 & $5.04 \pm 0.03$   & 0 & $0.082 \pm 0.010$\\
+    0 & 1 & 1 & $V_{0}$ & $V_{1}$ & $V_{1}$ & 0 & $0.403 \pm 0.011$ & 1 & $4.15 \pm 0.02$\\
+    1 & 0 & 0 & $V_{1}$ & $V_{0}$ & $V_{0}$ & 1 & $5.03 \pm 0.03$   & 0 & $0.083 \pm 0.010$\\
+    1 & 0 & 1 & $V_{1}$ & $V_{0}$ & $V_{1}$ & 0 & $0.403 \pm 0.011$ & 1 & $4.15 \pm 0.02$\\
+    1 & 1 & 0 & $V_{1}$ & $V_{1}$ & $V_{0}$ & 0 & $0.374 \pm 0.011$ & 1 & $4.14 \pm 0.02$\\
+    1 & 1 & 1 & $V_{1}$ & $V_{1}$ & $V_{1}$ & 1 & $5.03 \pm 0.03$   & 1 & $4.14 \pm 0.02$\\
     \hline
   \end{tabular}
   \caption{\emph{Tavole di verità del circuito \emph{1-bit full adder}. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A."}
