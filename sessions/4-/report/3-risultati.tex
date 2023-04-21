@@ -105,3 +105,35 @@ misura resistenzxa di pullup
   \caption{\emph{Tavole di verità del circuito \emph{1-bit full adder}. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A."}
   \label{tab:fulladder}
 \end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}[t]{c  c | c  c | c  c}
+    \hline
+    $V_{1}$ & $V_{2}$ & $V_{1}$ & $V_{2}$ & $V_{out}$ & $V_{out}$ (V) \\
+    \hline
+    0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.441 \pm 0.011$ \\
+    0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.461 \pm 0.011$ \\
+    1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.518 \pm 0.011$ \\
+    1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.97 \pm 0.02$ \\
+    \hline
+  \end{tabular}
+  \caption{\emph{Tavole di verità della porta \emph{AND} realizzata con un circuito in logica positiva. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "logica positiva"}
+  \label{tab:and-logicapositiva}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}[t]{c  c | c  c | c  c}
+    \hline
+    $V_{1}$ & $V_{2}$ & $V_{1}$ & $V_{2}$ & $V_{out}$ & $V_{out}$ (V) \\
+    \hline
+    0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.000 \pm 0.010$ \\
+    0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $4.52 \pm 0.02$ \\
+    1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $4.57 \pm 0.02$ \\
+    1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.59 \pm 0.02$ \\
+    \hline
+  \end{tabular}
+  \caption{\emph{Tavole di verità della porta \emph{OR} realizzata con un circuito in logica positiva. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "logica positiva"}
+  \label{tab:or-logicapositiva}
+\end{table}
