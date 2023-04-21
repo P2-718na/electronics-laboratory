@@ -9,9 +9,9 @@ in tabella \ref{tab:livelli-logici}
     \includegraphics[width=10cm]{../assets/1bfa.drawio.pdf}
     \caption{
       \emph{
-        Schema del circuito 1-bit full adder. Le iniziali "\textsc{oc}" sui gate \textsc{xor} indicano che i gate sono
+        Schema del circuito 1-bit full adder. Le iniziali "\textsc{oc}" sui gate \textsc{exor} indicano che i gate sono
         \emph{open collector}. In figura non sono riportate le resistenze di pull-up per i gate
-        \textsc{xor}. $A$, $B$ e $C_i$ sono rispettivamente i due bit di input e il carry bit di input.
+        \textsc{exor}. $A$, $B$ e $C_i$ sono rispettivamente i due bit di input e il carry bit di input.
       }
     }
     \label{fig:circuito}
@@ -23,10 +23,10 @@ in tabella \ref{tab:livelli-logici}
     \includegraphics[width=5cm]{../assets/oc.drawio.pdf}
     \caption{
       \emph{
-        Schema del collegamento dei gate \textsc{xor} alle resistenze di pull-up.
+        Schema del collegamento dei gate \textsc{exor} alle resistenze di pull-up.
       }
     }
-    \label{fig:xor-pullup}
+    \label{fig:exor-pullup}
   \end{subfigure}
   \caption{\emph{Schema circuitale per il circuito del full adder.}}
   \label{fig:circuiti}
@@ -77,7 +77,7 @@ Segue una lista del materiale e degli strumenti usati per entrambi i circuiti du
   \item%
   Connettori vari (connettori a banana, cavi per la scheda millefori).
   \item%
-  Circuiti integrati per \textsc{or}, \textsc{and}, \textsc{xor}, rispettivamente modelli: \emph{7432}, \emph{7408}, \emph{74LS136}.
+  Circuiti integrati per \textsc{or}, \textsc{and}, \textsc{exor}, rispettivamente modelli: \emph{7432}, \emph{7408}, \emph{74LS136}.
   \item%
   Due potenziometri da $1k\Omega$.
   \item%
@@ -92,13 +92,13 @@ Segue una lista del materiale e degli strumenti usati per entrambi i circuiti du
     \hline
     Grandezza & Valore & Fondoscala \\
     \hline
-    d.d.p. generatore & $(5.04 \pm 0.03) \: V$ & $(20 \: V)/div$ \\
+    d.d.p. generatore & $(5.04 \pm 0.03) \: V$ & $20 \: V$ \\
     Resistenza 1 & $(410 \pm 5) \: \Omega$ & $2 \: k\Omega$ \\
     Resistenza 2 & $(356 \pm 5) \: \Omega$ & $2 \: k\Omega$ \\
-    Stato basso F.A. & $(0.120 \pm 0.010) \: V$ & $(20 \: V)/div$ \\
-    Stato alto F.A. & $(4.04 \pm 0.02) \: V$ & $(20 \: V)/div$ \\
-    Stato basso circ.\\ logica positiva & $(0.000 \pm 0.010) \: V$ & $(20 \: V)/div$ \\
-    Stato alto circ.\\ logica positiva & $(5.04 \pm 0.03) \: V$ & $(20 \: V)/div$ \\
+    Stato basso F.A. & $(0.120 \pm 0.010) \: V$ & $20 \: V$ \\
+    Stato alto F.A. & $(4.04 \pm 0.02) \: V$ & $20 \: V$ \\
+    Stato basso circ.\\ logica positiva & $(0.000 \pm 0.010) \: V$ & $20 \: V$ \\
+    Stato alto circ.\\ logica positiva & $(5.04 \pm 0.03) \: V$ & $20 \: V$ \\
     \hline
   \end{tabular}
   \caption{\emph{Grandezze caratteristiche dei circuiti.}}
