@@ -35,22 +35,19 @@ I risultati delle misure delle porte \textsc{and} e \textsc{or} sono riportati r
       \hline
     \end{tabular}
   \end{subtable}
-  \caption{\emph{Tavole di verità delle porte \textsc{and} corrispondenti ai pin 1-2-3 (sopra) e 4-5-6 (sotto) dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A.".}
-  \label{tab:and-fulladder}
-\end{table}
 
-\begin{table}[H]
-  \centering
+  \vspace{.5mm}
+
   \begin{subtable}[H]{0.5\textwidth}
     \centering
     \begin{tabular}[t]{c  c | c  c | c  c}
       \hline
       A & B & V(A) & V(B) & Out & V(Out) (V)\\
       \hline
-      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.364 \pm 0.011$ \\
-      0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $5.03 \pm 0.03$ \\
-      1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $5.03 \pm 0.03$ \\
-      1 & 1 & $V_{1}$ & $V_{1}$ & 0 & $0.400 \pm 0.011$ \\
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.10 \pm 0.02$ \\
       \hline
     \end{tabular}
   \end{subtable}
@@ -63,15 +60,82 @@ I risultati delle misure delle porte \textsc{and} e \textsc{or} sono riportati r
       \hline
       A & B & V(A) & V(B) & Out & V(Out) (V)\\
       \hline
-      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.402 \pm 0.011$ \\
-      0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $5.03 \pm 0.03$ \\
-      1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $5.03 \pm 0.03$ \\
-      1 & 1 & $V_{1}$ & $V_{1}$ & 0 & $0.443 \pm 0.011$ \\
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.10 \pm 0.02$ \\
       \hline
     \end{tabular}
   \end{subtable}
-  \caption{\emph{Tavole di verità delle porte \textsc{exor} corrispondenti ai pin 13-12-11 (sopra) e 10-9-8 (sotto) dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A.".}
-  \label{tab:exor-fulladder}
+  \caption{\emph{Tavole di verità delle porte \textsc{and} corrispondenti ai pin 1-2-3, 4-5-6, 13-12-11, 10-9-8 dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A.".}
+  \label{tab:and1-multiplexer}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{subtable}[H]{0.5\textwidth}
+    \centering
+    \begin{tabular}[t]{c  c | c  c | c  c}
+      \hline
+      A & B & V(A) & V(B) & Out & V(Out) (V)\\
+      \hline
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.10 \pm 0.02$ \\
+      \hline
+    \end{tabular}
+  \end{subtable}
+
+  \vspace{.5cm}
+
+  \begin{subtable}[H]{0.5\textwidth}
+    \centering
+    \begin{tabular}[t]{c  c | c  c | c  c}
+      \hline
+      A & B & V(A) & V(B) & Out & V(Out) (V)\\
+      \hline
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.070 \pm 0.012$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.071 \pm 0.010$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.09 \pm 0.02$ \\
+      \hline
+    \end{tabular}
+  \end{subtable}
+
+  \vspace{.5mm}
+
+  \begin{subtable}[H]{0.5\textwidth}
+    \centering
+    \begin{tabular}[t]{c  c | c  c | c  c}
+      \hline
+      A & B & V(A) & V(B) & Out & V(Out) (V)\\
+      \hline
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.10 \pm 0.02$ \\
+      \hline
+    \end{tabular}
+  \end{subtable}
+
+  \vspace{.5cm}
+  
+  \begin{subtable}[H]{0.5\textwidth}
+    \centering
+    \begin{tabular}[t]{c  c | c  c | c  c}
+      \hline
+      A & B & V(A) & V(B) & Out & V(Out) (V)\\
+      \hline
+      0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.068 \pm 0.010$ \\
+      1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.10 \pm 0.02$ \\
+      \hline
+    \end{tabular}
+  \end{subtable}
+  \caption{\emph{Tavole di verità delle porte \textsc{and} corrispondenti ai pin 1-2-3, 4-5-6, 13-12-11, 10-9-8 dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A.".}
+  \label{tab:and2-multiplexer}
 \end{table}
 
 \begin{table}[H]
@@ -86,58 +150,74 @@ I risultati delle misure delle porte \textsc{and} e \textsc{or} sono riportati r
     1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.15 \pm 0.02$ \\
     \hline
   \end{tabular}
-  \caption{\emph{Tavole di verità della porta \textsc{or} corrispondenti ai pin 1-2-3 dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A.".}
-  \label{tab:or-fulladder}
-\end{table}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}[t]{c  c  c | c  c  c | c  c | c  c}
-    \hline
-    A & B & $C_{in}$ & V(A) & V(B) & V($C_{in}$) & S & V(S) (V) & $C_{out}$ & V($C_{out}$) (V) \\
-    \hline
-    0 & 0 & 0 & $V_{0}$ & $V_{0}$ & $V_{0}$ & 0 & $0.372 \pm 0.011$   & 0 & $0.084 \pm 0.010 $\\
-    0 & 0 & 1 & $V_{0}$ & $V_{0}$ & $V_{1}$ & 1 & $5.03 \pm 0.03$   & 0 & $0.086 \pm 0.010$\\
-    0 & 1 & 0 & $V_{0}$ & $V_{1}$ & $V_{0}$ & 1 & $5.04 \pm 0.03$   & 0 & $0.082 \pm 0.010$\\
-    0 & 1 & 1 & $V_{0}$ & $V_{1}$ & $V_{1}$ & 0 & $0.403 \pm 0.011$ & 1 & $4.15 \pm 0.02$\\
-    1 & 0 & 0 & $V_{1}$ & $V_{0}$ & $V_{0}$ & 1 & $5.03 \pm 0.03$   & 0 & $0.083 \pm 0.010$\\
-    1 & 0 & 1 & $V_{1}$ & $V_{0}$ & $V_{1}$ & 0 & $0.403 \pm 0.011$ & 1 & $4.15 \pm 0.02$\\
-    1 & 1 & 0 & $V_{1}$ & $V_{1}$ & $V_{0}$ & 0 & $0.374 \pm 0.011$ & 1 & $4.14 \pm 0.02$\\
-    1 & 1 & 1 & $V_{1}$ & $V_{1}$ & $V_{1}$ & 1 & $5.03 \pm 0.03$   & 1 & $4.14 \pm 0.02$\\
-    \hline
-  \end{tabular}
-  \caption{\emph{Tavole di verità del circuito \emph{1-bit full adder}. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A.".}
-  \label{tab:fulladder}
-\end{table}
-
-\begin{table}[H]
-  \centering
+  \vspace{.5mm}
   \begin{tabular}[t]{c  c | c  c | c  c}
     \hline
-    $V_{1}$ & $V_{2}$ & $V_{1}$ & $V_{2}$ & $V_{out}$ & $V_{out}$ (V) \\
+    A & B & V(A) & V(B) & Out & V(Out) (V)\\
     \hline
-    0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.441 \pm 0.011$ \\
-    0 & 1 & $V_{0}$ & $V_{1}$ & 0 & $0.461 \pm 0.011$ \\
-    1 & 0 & $V_{1}$ & $V_{0}$ & 0 & $0.518 \pm 0.011$ \\
-    1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.97 \pm 0.02$ \\
+    0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.081 \pm 0.010$ \\
+    0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $4.14 \pm 0.02$ \\
+    1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $4.14 \pm 0.02$ \\
+    1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.15 \pm 0.02$ \\
     \hline
   \end{tabular}
-  \caption{\emph{Tavole di verità della porta \emph{AND} realizzata con un circuito in logica positiva. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "logica positiva".}
-  \label{tab:and-logicapositiva}
+  \vspace{.5mm}
+  \begin{tabular}[t]{c  c | c  c | c  c}
+    \hline
+    A & B & V(A) & V(B) & Out & V(Out) (V)\\
+    \hline
+    0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.081 \pm 0.010$ \\
+    0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $4.14 \pm 0.02$ \\
+    1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $4.14 \pm 0.02$ \\
+    1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.15 \pm 0.02$ \\
+    \hline
+  \end{tabular}
+  \caption{\emph{Tavole di verità della porta \textsc{or} corrispondenti ai pin 1-2-3, 4-5-6, 13-12-11 dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A.".}
+  \label{tab:or-multiplexer}
 \end{table}
 
 \begin{table}[H]
   \centering
-  \begin{tabular}[t]{c  c | c  c | c  c}
+  \begin{subtable}
+    \centering
+    \begin{tabular}[t]{c  c | c  c }
+      \hline
+      A & V(A) & Out & V(Out) (V) \\
+      \hline
+      0 & $V_{0}$ & 1 & $0.372 \pm 0.011$ \\
+      1& $V_{1}$ & 0 & $5.03 \pm 0.03$ \\
+      \hline
+    \end{tabular}
+  \end{subtable}
+  \vspace{.5mm}
+  \begin{subtable}
+    \centering
+    \begin{tabular}[t]{c  c | c  c }
+      \hline
+      A & V(A) & Out & V(Out) (V) \\
+      \hline
+      0 & $V_{0}$ & 1 & $0.372 \pm 0.011$ \\
+      1& $V_{1}$ & 0 & $5.03 \pm 0.03$ \\
+      \hline
+    \end{tabular}
+  \end{subtable}
+  \caption{\emph{Tavole di verità delle porte \emph{not} corrisponenti ai pin 1-2-3, 4-5-6 dell'integrato 7408. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "F.A.".}
+  \label{tab:not-multiplexer}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c | c c | c c }
     \hline
-    $V_{1}$ & $V_{2}$ & $V_{1}$ & $V_{2}$ & $V_{out}$ & $V_{out}$ (V) \\
+    $I_{1}$ & $I_{0}$ & $S_{1}$ & $S_{0}$ & Out & V(Out) (V) \\
     \hline
-    0 & 0 & $V_{0}$ & $V_{0}$ & 0 & $0.000 \pm 0.010$ \\
-    0 & 1 & $V_{0}$ & $V_{1}$ & 1 & $4.52 \pm 0.02$ \\
-    1 & 0 & $V_{1}$ & $V_{0}$ & 1 & $4.57 \pm 0.02$ \\
-    1 & 1 & $V_{1}$ & $V_{1}$ & 1 & $4.59 \pm 0.02$ \\
-    \hline
+    1 & 0 & 0 & 0 & 0 & $0.07763$ \\
+    0 & 1 & 0 & 0 & 1 & $0.07763$ \\
+    0 & 1 & 0 & 1 & 0 & $0.07763$ \\
+    1 & 0 & 0 & 1 & 1 & $0.07763$ \\
+    1 & 1 & 1 & 0 & 0 & $0.07763$ \\
+    0 & 0 & 1 & 0 & 1 & $0.07763$ \\
+    1 & 1 & 1 & 1 & 0 & $0.07763$ \\
+    0 & 0 & 1 & 1 & 1 & $0.07763$ \\
   \end{tabular}
-  \caption{\emph{Tavole di verità della porta \emph{OR} realizzata con un circuito in logica positiva. I valori di $V_{0}$ e $V_{1}$ sono quelli riportati in tabella \ref{tab:livelli-logici}} sotto la dicitura "logica positiva".}
-  \label{tab:or-logicapositiva}
 \end{table}
